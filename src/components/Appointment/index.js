@@ -28,17 +28,16 @@ export default function Appointment(props) {
     return (
         <article className="appointment">
             <Header time={props.time} />
-            {/* {props.interview ? <Show student={props.interview.student} interviewer={props.interview.interviewer} /> : <Empty />} */}
-
+            
             {mode === CREATE && (
                 <Form
-                    interviewers={[]}
+                    interviewers={props.interviewers}
                     onCancel={onCancel}
                 />
             )}
 
             {mode === EMPTY && <Empty onAdd={onAdd} />}
-            
+
                 {mode === SHOW && (
                     <Show
                         student={props.interview.student}
