@@ -36,10 +36,10 @@ export default function useApplicationData() {
             interview: { ...interview }
         };
     
-        const appointments = {
-            ...state.appointments,
-            [id]: appointment
-        }
+        // const appointments = {
+        //     ...state.appointments,
+        //     [id]: appointment
+        // }
     
         return axios.put(`/api/appointments/${id}`, appointment)
             // .then(() => {
@@ -48,15 +48,15 @@ export default function useApplicationData() {
     }
     
     function cancelInterview(id) {
-        const appointment = {
-            ...state.appointments[id],
-            interview: null
-        };
+        // const appointment = {
+        //     ...state.appointments[id],
+        //     interview: null
+        // };
     
-        const appointments = {
-            ...state.appointments,
-            [id]: appointment
-        };
+        // const appointments = {
+        //     ...state.appointments,
+        //     [id]: appointment
+        // };
 
         return axios.delete(`/api/appointments/${id}`)
             // .then(() => {
