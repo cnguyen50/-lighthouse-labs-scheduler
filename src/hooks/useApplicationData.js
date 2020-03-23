@@ -25,7 +25,7 @@ export default function useApplicationData() {
         }).catch(() => {
             console.log("error")
         })
-    }, [])
+    }, [bookInterview, cancelInterview])
 
     const setDay = day => setState(prev => ({ ...prev, day }))
 
@@ -42,9 +42,9 @@ export default function useApplicationData() {
         }
     
         return axios.put(`/api/appointments/${id}`, appointment)
-            .then(() => {
-                setState({ ...state, appointments })
-            })
+            // .then(() => {
+            //     setState({ ...state, appointments })
+            // })
     }
     
     function cancelInterview(id) {
@@ -59,9 +59,9 @@ export default function useApplicationData() {
         };
 
         return axios.delete(`/api/appointments/${id}`)
-            .then(() => {
-                setState({ ...state, appointments })
-            })
+            // .then(() => {
+            //     setState({ ...state, appointments })
+            // })
     }
     return { setDay, cancelInterview, bookInterview, state }
 

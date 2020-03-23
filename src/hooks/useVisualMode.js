@@ -6,7 +6,8 @@ export default function useVisualMode(initial) {
     const [history, setHistory] = useState([initial]);
 
     function transition(next, replace = false) {
-        if (!replace) setHistory([initial].concat(mode));
+        if (!replace)
+        setHistory([initial].concat(mode));
         setMode(next);
     }
 
