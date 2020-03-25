@@ -28,7 +28,6 @@ export default function useApplicationData() {
     }
 
     useEffect(() => {
-        console.log("shitting itself")
         reload();
     }, [])
 
