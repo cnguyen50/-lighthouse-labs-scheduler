@@ -25,7 +25,7 @@ export default function useApplicationData() {
         }).catch(() => {
             console.log("error")
         })
-    }, [bookInterview, cancelInterview])
+    }, [])
 
     const setDay = day => setState(prev => ({ ...prev, day }))
 
@@ -36,32 +36,33 @@ export default function useApplicationData() {
             interview: { ...interview }
         };
     
-        // const appointments = {
-        //     ...state.appointments,
-        //     [id]: appointment
-        // }
+        const appointments = {
+            ...state.appointments,
+            [id]: appointment
+        }
     
         return axios.put(`/api/appointments/${id}`, appointment)
-            // .then(() => {
-            //     setState({ ...state, appointments })
-            // })
+            .then(() => {
+                //call reset state to update spots
+                setState({ ...state, appointments })
+            })
     }
     
     function cancelInterview(id) {
-        // const appointment = {
-        //     ...state.appointments[id],
-        //     interview: null
-        // };
+        const appointment = {
+            ...state.appointments[id],
+            interview: null
+        };
     
-        // const appointments = {
-        //     ...state.appointments,
-        //     [id]: appointment
-        // };
+        const appointments = {
+            ...state.appointments,
+            [id]: appointment
+        };
 
         return axios.delete(`/api/appointments/${id}`)
-            // .then(() => {
-            //     setState({ ...state, appointments })
-            // })
+            .then(() => {
+                setState({ ...state, appointments })
+            })
     }
     return { setDay, cancelInterview, bookInterview, state }
 

@@ -17,9 +17,9 @@ export default function Application(props) {
 
 
 const interviewers = getInterviewersForDay(state, state.day);
-const _appointments = getAppointmentsForDay(state, state.day)
+// const _appointments = getAppointmentsForDay(state, state.day)
 
-const appointments = _appointments.map(appointment => {
+const appointments = getAppointmentsForDay(state, state.day).map(appointment => {
 const interview = getInterview(state, appointment.interview)
 
     return (
@@ -34,7 +34,7 @@ const interview = getInterview(state, appointment.interview)
       />
     );
 });
-  
+  // console.log("TESTING", state.days)
   return (
     <main className="layout">
       <section className="sidebar">
