@@ -10,7 +10,7 @@ export default function useApplicationData() {
         interviewers: {}
     });
 
-    useEffect(() => {
+    function reload() {
         Promise.all([
             Promise.resolve(axios.get("/api/days")),
             Promise.resolve(axios.get("/api/appointments")),
@@ -25,6 +25,11 @@ export default function useApplicationData() {
         }).catch(() => {
             console.log("error")
         })
+    }
+
+    useEffect(() => {
+        console.log("shitting itself")
+        reload();
     }, [])
 
     const setDay = day => setState(prev => ({ ...prev, day }))
@@ -44,6 +49,7 @@ export default function useApplicationData() {
         return axios.put(`/api/appointments/${id}`, appointment)
             .then(() => {
                 //call reset state to update spots
+                reload()
                 setState({ ...state, appointments })
             })
     }
@@ -61,6 +67,7 @@ export default function useApplicationData() {
 
         return axios.delete(`/api/appointments/${id}`)
             .then(() => {
+                reload();
                 setState({ ...state, appointments })
             })
     }
