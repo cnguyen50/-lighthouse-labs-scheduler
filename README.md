@@ -21,3 +21,28 @@ npm test
 ```sh
 npm run storybook
 ```
+## Dependencies
+
+- Dependencies
+  - axios
+  - classnames
+  - normalize.css
+  - react
+  - react-dom
+  - react-scripts
+  
+- Dev Dependencies
+  - babel/core
+  - storybook/addon-actions
+  - storybook/addon-backgrounds
+  - storybook/addon-links
+  - storybook/addons
+  - storybook/react
+  - testing-library/jest-dom
+  - testing-library/react
+  - testing-library/react-hooks
+  - babel-loader
+  - cypress
+  - node-sass
+  - prop-types
+  - react-test-renderer
