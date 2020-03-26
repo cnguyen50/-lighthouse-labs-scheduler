@@ -3,7 +3,7 @@
 ### Scheduler is a React Application that allows users to book, cancel, and edit interviews.
 
 !['Create Appointment'](https://github.com/cnguyen50/-lighthouse-labs-scheduler/blob/master/docs/create.png)
-!['Delete Appointment'](https://github.com/cnguyen50/-lighthouse-labs-scheduler/blob/master/docs/delete.png)
+!['Delete Appointment'](https://github.com/cnguyen50/-lighthouse-labs-scheduler/blob/master/docs/deleteform.png)
 
 ## Setup
 
