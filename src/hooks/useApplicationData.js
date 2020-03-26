@@ -47,7 +47,6 @@ export default function useApplicationData() {
     
         return axios.put(`/api/appointments/${id}`, appointment)
             .then(() => {
-                //call reset state to update spots
                 reload()
                 setState({ ...state, appointments })
             })

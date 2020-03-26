@@ -56,10 +56,10 @@ const fixtures = {
 export default {
     put: jest.fn(url => {
         if (url.includes("/api/appointments")) {
-        return Promise.resolve({
-            status: 204,
-            statusText: "OK"
-        });
+            return Promise.resolve({
+                status: 204,
+                statusText: "OK"
+            });
         }
     }),
 
