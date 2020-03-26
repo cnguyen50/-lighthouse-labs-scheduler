@@ -1,5 +1,10 @@
 # Interview Scheduler
 
+### Scheduler is a React Application that allows users to book, cancel, and edit interviews.
+
+!['Create Appointment'](https://github.com/cnguyen50/-lighthouse-labs-scheduler/blob/master/docs/create.png)
+!['Delete Appointment'](https://github.com/cnguyen50/-lighthouse-labs-scheduler/blob/master/docs/delete.png)
+
 ## Setup
 
 Install dependencies with `npm install`.
@@ -30,7 +35,7 @@ npm run storybook
   - react
   - react-dom
   - react-scripts
-  
+
 - Dev Dependencies
   - babel/core
   - storybook/addon-actions
